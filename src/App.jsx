@@ -1,27 +1,24 @@
+import { useState, useCallback, useMemo } from 'react';
+
 import './App.css';
 
+import REPORTS from './utils/getReports'
+import isReportSafe from './utils/isReportSafe'
+
+const MAX_DIFF = 3;
+
 function App() {
+  const safeResults = useMemo(() => {
+    let total = 0;
+    for (let i = 0; i < REPORTS.length; i ++) {
+      if (isReportSafe(REPORTS[i], MAX_DIFF)) total++
+    }
+    return total;
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <p>Safe results: {safeResults}</p>
     </div>
   );
 }
