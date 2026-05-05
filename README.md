@@ -1,3 +1,18 @@
+HOMEPAGE
+
+<img width="1791" height="538" alt="image" src="https://github.com/user-attachments/assets/5c91602d-13b7-4515-93b9-fea503a19af2" />
+
+
+-------
+
+
+TESTS RESULTS
+
+<img width="401" height="237" alt="image" src="https://github.com/user-attachments/assets/2b6af6a5-d11b-4131-b382-caed8932daa4" />
+
+
+
+
 # GitHub Codespaces ♥️ React
 
 Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
